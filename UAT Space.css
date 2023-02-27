@@ -1,0 +1,22 @@
+body {/*displays the background*/
+    background-color: rgb(228, 241, 240);
+    font-size: 1.0em;
+}
+
+h1 {
+     /* displays the UTA Space program */ 
+    color: rgb(221, 41, 182);
+}
+#intro {
+    /*displays the intro font size*/
+    font-size:  1.0em;
+    color: blue;
+}
+.colorful {
+    color: green;
+}
+p {
+    /*aligns the text*/
+    text-align:left;
+    color: yellow;
+}

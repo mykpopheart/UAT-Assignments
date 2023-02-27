@@ -1,0 +1,81 @@
+ <!-- Mikita McWhite -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title style="font:bold">UAT Space Program</title>
+     <link rel="stylesheet" href="UAT Space.css">
+     <script src="UATSpaceJava.js"></script>
+     <script src="ui.js"></script>
+     <script>
+        //javascript code
+        document.getElementById("UATSpaceJava.js").innerHTML ="Hello Javascript";
+        </script>
+     
+     <style>
+          p{
+            
+             font-size: 12pt;
+             font-family:cursive;
+             color: rgb(189, 19, 146)
+ 
+          }
+     </style>
+ </head>
+ <body>
+    
+       <img src="https://cdn.discordapp.com/attachments/587528166248284161/1076700352415543407/UATspaceLogo-2.jpg">
+<h1 style="background-color: darkslategrey;" >UAT Space Program
+
+</h1>
+ 
+<p>
+  Test of the document write function. 
+     </p>
+     <p>
+  Test of the paragraph tags.
+     </p>
+     <p>
+        
+
+ <p id="countdown">10</p>
+ <button id="start">Start</button>
+ <button id="stop">Stop</button>
+ 
+ <script>
+ let countdownInterval;
+ let currTme = 10;
+ const countdownElement = document.getElementById("countdown");
+ //starts countdown
+  function startCountdown() {
+  currTme = 10;
+  countdownElement.innerText = currTme;
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    currTme--;
+    //displays launch warning
+    if (currTme < 5) {
+      countdownElement.innerText = `Warning: Less than 1/2 way to launch, time left = ${currTme}`;
+    } else if (currTme >= 0) {
+      countdownElement.innerText = currTme;
+    }//displays blastoff
+    if (currTme === 0) {
+      clearInterval(countdownInterval);
+      countdownElement.innerText = "Blastoff";
+    }
+  }, 1000);
+}
+ 
+ function stopCountdown() {
+   clearInterval(countdownInterval);
+   currTme = 10;
+   countdownElement.innerText = currTme;
+ }
+ 
+ document.getElementById("start").addEventListener("click", startCountdown);
+ document.getElementById("stop").addEventListener("click", stopCountdown);
+ </script>
+ </body>
+ </html>
