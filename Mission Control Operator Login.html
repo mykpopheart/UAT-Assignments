@@ -1,0 +1,124 @@
+<!-- Mikita McWhite -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font:bold">UAT Space Program</title>
+    <link rel="stylesheet" href="UAT Space.css">
+    <script src="UATSpaceJava.js"></script>
+    <script src="ui.js"></script>
+    <script>
+       //javascript
+       document.getElementById("UATSpaceJava.js").innerHTML ="Hello Javascript";
+       </script>
+    
+    <style>
+         p{
+           
+            font-size: 12pt;
+            font-family:cursive;
+            color: rgb(189, 19, 146)
+
+         }
+    </style>
+</head>
+<body>
+   
+      <img src="https://cdn.discordapp.com/attachments/587528166248284161/1076700352415543407/UATspaceLogo-2.jpg">
+<h1 style="background-color: darkslategrey;" >UAT Space Program
+
+</h1>
+
+<p style="font-family: fantasy;">
+ Test of the document write function. 
+    </p>
+    <hr>
+    <p style="color: rgb(202, 29, 173);">
+ Test of the paragraph tags.
+    </p>
+    <p>
+        
+       
+
+<p id="countdown">10</p>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<script>
+let countdownInterval;
+let currTme = 10;
+const countdownElement = document.getElementById("countdown");
+//starts countdown
+ function startCountdown() {
+ currTme = 10;
+ countdownElement.innerText = currTme;
+ clearInterval(countdownInterval);
+ countdownInterval = setInterval(() => {
+   currTme--;
+   //displays launch warning
+   if (currTme < 5) {
+     countdownElement.innerText = `Warning: Less than 1/2 way to launch, time left = ${currTme}`;
+   } else if (currTme >= 0) {
+     countdownElement.innerText = currTme;
+   }//displays blastoff
+   if (currTme === 0) {
+     clearInterval(countdownInterval);
+     countdownElement.innerText = "Blastoff";
+   }
+ }, 1000);
+}
+
+function stopCountdown() {
+  clearInterval(countdownInterval);
+  currTme = 10;
+  countdownElement.innerText = currTme;
+}
+//start and stops countdown
+document.getElementById("start").addEventListener("click", startCountdown);
+document.getElementById("stop").addEventListener("click", stopCountdown);
+</script>
+
+<form id="form">
+    <pre>
+        <hr>
+    <b><label for="firstName">First Name:</label></b>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <b><label for="lastName">Last Name:</label></b>
+    <input type="text" id="lastName" name="lastName" required><br>
+</pre>
+<hr>
+    <label for="badgeNumber">Badge Number:</label>
+    <input type="text" id="badgeNumber" name="badgeNumber" required><br>
+
+    <button id="submit">Submit</button>
+ </form>
+
+ <div id="output"></div>
+
+ <script>//submit button
+    document.getElementById("form").addEventListener("submit", function(event) {
+       event.preventDefault();
+
+
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const badgeNumber = document.getElementById("badgeNumber").value;
+       
+//concatenates the name
+       const concatenatedName = firstName + " " + lastName;
+//concatenated name cannot be more than 20
+       if (concatenatedName.length > 20) {
+          alert("Name is too long. Please re-enter your first and last name.");
+          // validate that it is a number and has 3 or fewer digits
+       } else if (isNaN(badgeNumber) || badgeNumber.length > 3) {
+          alert("Badge number is invalid. Please enter a number with 3 or fewer digits.");
+       } else {//validates badge when entered correctly
+          document.getElementById("output").innerText = `Welcome, ${concatenatedName}! Your badge number is ${badgeNumber}.`;
+       }
+    });
+ </script>
+</body>
+</html>
