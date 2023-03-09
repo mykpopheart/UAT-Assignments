@@ -1,11 +1,11 @@
 body {/*displays the background*/
-    background-color: rgb(228, 241, 240);
+    background-color: rgb(185, 71, 19);
     font-size: 1.0em;
 }
 
 h1 {
      /* displays the UTA Space program */ 
-    color: rgb(221, 41, 182);
+    color: rgb(41, 59, 221);
 }
 #intro {
     /*displays the intro font size*/
