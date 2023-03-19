@@ -1,16 +1,16 @@
 body {/*displays the background*/
-    background-color: rgb(185, 71, 19);
+    background-color: rgb(206, 34, 77);
     font-size: 1.0em;
 }
 
 h1 {
      /* displays the UTA Space program */ 
-    color: rgb(41, 59, 221);
+    color: rgb(42, 58, 32);
 }
 #intro {
     /*displays the intro font size*/
     font-size:  1.0em;
-    color: blue;
+    color: rgb(141, 5, 5);
 }
 .colorful {
     color: green;
@@ -18,5 +18,26 @@ h1 {
 p {
     /*aligns the text*/
     text-align:left;
-    color: yellow;
+    color: rgb(8, 8, 2);
+}
+table {
+    border-collapse: collapse;
+    width: 0%;
+}
+
+th {
+	border-style:solid;
+	padding:5px;
+}
+td{
+	border-style: solid;
+	padding:5px;
+}
+
+tr {
+    height: 20px; /* set the height of the rows */
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
