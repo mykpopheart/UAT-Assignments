@@ -22,13 +22,13 @@ p {
 }
 table {
     border-collapse: collapse;
-    width: 50%;
+    width: 50%; /*adjust the width of the table rows*/
 }
 
 th {
 	border-style:groove;
 	padding:15px;
-    width: 50%;
+    width: 50%; /*adjust the width of the table rows*/
 }
 td{
 	border-style: solid;
