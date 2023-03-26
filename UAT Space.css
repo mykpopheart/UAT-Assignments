@@ -44,9 +44,4 @@ tr:hover {
     background-color: #f5f5f5;
 }
 
-img {
-    opacity: 1; /* Adjust this value to control the image transparency (0 is fully transparent, 1 is fully opaque) */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adjust the box-shadow property to create a subtle shadow effect around the image */
-   
-} 
 
