@@ -1,0 +1,201 @@
+<!-- Mikita McWhite -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: cursive;">UAT Space Program</title>
+    <link rel="stylesheet" href="UAT Space.css">
+    <script src="UATSpaceJava.js"></script>
+    <script src="ui.js"></script>
+    <script>
+       //javascript
+       document.getElementById("UATSpaceJava.js").innerHTML ="Hello Javascript";
+       </script>
+    
+    <style>
+    
+      th{
+        border-style:solid
+      }
+         p{           
+            font-size: 12pt;
+            font-family:cursive;
+            color: rgb(133, 9, 102)
+
+         }
+    </style>
+    <script>
+		var nameInput = document.getElementById("nameInput");
+		var submitButton = document.getElementById("submitButton");
+
+		submitButton.addEventListener("click", function() {
+			alert("Hello, " + nameInput.value + "!");
+		});
+	</script>
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a {
+            font-size: 24px;
+            text-decoration: none;
+            color: rgb(66, 45, 68);
+            border: 2px solid rgb(77, 52, 72);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        a:hover {
+            background-color: rgb(63, 48, 73);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   
+      <img src="https://cdn.discordapp.com/attachments/587528166248284161/1076700352415543407/UATspaceLogo-2.jpg">
+<h1 style="background-color: rgb(65, 45, 68);" >UAT Space Program
+</h1>
+<!--table that is 2 columns and 22 rows-->
+<table id="TwoByTwentyTwo">
+  <thead>
+    <tr><!--table heading data-->
+      <th>Data Type</th>
+      <th>Reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><!--This is the 1 row-->
+        <td>Time Elapsed</td><!--This is the 1st table data-->
+        <td>365 days</td><!--This is the 2nd table data-->
+  </tr>
+    <tr><!--This is the 2 row-->
+      <td>Latitude</td>
+      <td>33.3776864</td>
+    </tr>
+    <tr><!--This is the 3 row-->
+      <td>Longitude</td>
+      <td>-111.9757618</td>
+    </tr>
+    <tr><!--This is the 4 row-->
+      <td>GPS Altitude</td>
+      <td>20,000 ft</td>
+    </tr>
+    <tr><!--This is the 5 row-->
+      <td>BMP Sensor Altitude</td>
+      <td>56021.00</td>
+    </tr>
+    <tr><!--This is the 6 row-->
+      <td>BMP Sensor Pressure</td>
+      <td>5.85</td>
+    </tr>
+    <tr><!--This is the 7 row-->
+      <td>BMP Sensor Temperature</td>
+      <td>-40°C</td>
+    </tr>
+    <tr><!--This is the 8 row-->
+      <td>Digital Sensor Temperature</td>
+      <td>-20°C</td>
+    </tr>
+    <tr><!--This is the 9 row-->
+      <td>CSS Sensor Temperature</td>
+      <td>52°C</td>
+    </tr>
+    <tr><!--This is the 10 row-->
+      <td>CSS Sensor eCO2</td>
+      <td>400</td>
+    </tr>
+    <tr><!--This is the 11 row-->
+      <td>CSS Sensor TVOC</td>
+      <td>58.62ppb</td>
+    </tr>
+    <tr><!--This is the 12 row-->
+      <td>UV</td>
+      <td>5</td>
+    </tr>
+    <tr><!--This is the 13 row-->
+      <td>Accel X</td>
+      <td>-0.87</td>
+    </tr>
+    <tr><!--This is the 14 row-->
+      <td>Accel Y</td>
+      <td>-0.02</td>
+    </tr>
+    <tr><!--This is the 15 row-->
+      <td>Accel Z</td>
+      <td>9.61</td>
+    </tr>
+    <tr><!--This is the 16 row-->
+      <td>Magnetic X</td>
+      <td>0.13</td>
+    </tr>
+    <tr><!--This is the 17 row-->
+      <td>Magnetic Y</td>
+      <td>0.57</td>
+    </tr>
+    <tr><!--This is the 18 row-->
+      <td>Magnetic Z</td>
+      <td>-0.24</td>
+    </tr>
+    <tr><!--This is the 19 row-->
+      <td>Gyro X</td>
+      <td>4.66</td>
+    </tr>
+    <tr><!--This is the 20 row-->
+      <td>Gyro Y</td>
+      <td>0.01</td>
+    </tr>
+    <tr><!--This is the 21 row-->
+      <td>Gyro Z</td>
+      <td>-0.4</td>
+    </tr>
+    <tr><!--This is the 22 row-->
+  </tbody>
+    
+</table> 
+
+<script> //Toogle between the start and stop buttons to enable and disable them
+  function toggleButtons(clickedButtonId) {
+      const startButton = document.getElementById("startButton");
+      const stopButton = document.getElementById("stopButton");
+
+      if (clickedButtonId === "startButton") {
+          startButton.disabled = true;
+          stopButton.disabled = false;
+      } else {
+          startButton.disabled = false;
+          stopButton.disabled = true;
+      }
+  }
+</script>
+</head>
+<body><!--start and stop buttons-->
+<button id="startButton" onclick="toggleButtons('startButton')">Start</button>
+<button id="stopButton" onclick="toggleButtons('stopButton')" disabled>Stop</button>
+<h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">UAT Space Program Landing Page</h1>
+    <div class="content">
+        <a href="UATSpaceProgram.html">Go to UAT Space Program</a>
+    </div>
+</body>
+</html>
+
+
+
+<audio controls> <!---audio for sound-->
+  <source src="us-lab-background.mp3"type="audio/mpeg">  
+</audio>
+ </script>
+</body>
+</html>
